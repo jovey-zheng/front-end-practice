@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSSTriangle</title>
+	<style type="text/css">
+	body { 
+		margin: 0 auto;
+		width: 450px;
+	}
+	pre {
+		background: #e3e3e3;
+		padding: 10px;
+	}
+	.sample-block {
+		border: 1px solid #e3e3e3;
+	}
+	.Triangle {
+		height: 0;
+		width: 0;
+	}
+	.display-ib {
+		display: inline-block;
+		margin-right: 10px;
+	}
+	.top-left {
+		border-top: 100px solid #000;
+		border-right: 100px solid transparent;
+	}
+	.top-right {
+		border-top: 100px solid #000;
+		border-left: 100px solid transparent;
+	}
+	.bottom-right {
+		border-bottom: 100px solid #000;
+		border-left: 100px solid transparent;
+	}
+	.bottom-left {
+		border-bottom: 100px solid #000;
+		border-right: 100px solid transparent;
+	}
+	.up {
+	    border-left: 50px solid transparent;
+	    border-right: 50px solid transparent;
+	    border-bottom: 100px solid #000;
+	}
+	.down {
+		border-left: 50px solid transparent;
+	    border-right: 50px solid transparent;
+	    border-top: 100px solid #000;
+	}
+	.left {
+		border-top: 50px solid transparent;
+	    border-right: 100px solid #000;
+	    border-bottom: 50px solid transparent;
+	}
+	.right {
+		border-top: 50px solid transparent;
+	    border-left: 100px solid #000;
+	    border-bottom: 50px solid transparent;
+	}
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>RESULT</th>
+			<th>CODE</th>
+		</tr>
+
+		<tr>
+			<td>
+				<div class="Triangle display-ib top-left"></div>
+			</td>
+			<td>
+				<pre class="display-ib">
+.top-left {
+	border-top: 100px solid #000;
+	border-right: 100px solid transparent;
+}
+				</pre>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<div class="Triangle display-ib top-right"></div>
+			</td>
+			<td>
+				<pre class="display-ib">
+.top-right {
+	border-top: 100px solid #000;
+	border-left: 100px solid transparent;
+}
+				</pre>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<div class="Triangle display-ib bottom-right"></div>
+			</td>
+			<td>
+				<pre class="display-ib">
+.bottom-right {
+	border-bottom: 100px solid #000;
+	border-left: 100px solid transparent;
+}
+				</pre>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<div class="Triangle display-ib bottom-left"></div>
+			</td>
+			<td>
+				<pre class="display-ib">
+.bottom-left {
+	border-bottom: 100px solid #000;
+	border-right: 100px solid transparent;
+}
+				</pre>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<div class="Triangle display-ib up"></div>
+			</td>
+			<td>
+				<pre class="display-ib">
+.up {
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid #000;
+}
+				</pre>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<div class="Triangle display-ib down"></div>
+			</td>
+			<td>
+				<pre class="display-ib">
+.down {
+	border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid #000;
+}
+				</pre>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<div class="Triangle display-ib left"></div>
+			</td>
+			<td>
+				<pre class="display-ib">
+.left {
+	border-top: 50px solid transparent;
+    border-right: 100px solid #000;
+    border-bottom: 50px solid transparent;
+}
+				</pre>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<div class="Triangle display-ib right"></div>
+			</td>
+			<td>
+				<pre class="display-ib">
+.right {
+	border-top: 50px solid transparent;
+    border-left: 100px solid #000;
+    border-bottom: 50px solid transparent;
+}
+				</pre>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
