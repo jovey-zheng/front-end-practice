@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ScrollBar</title>
+  <style type="text/css">
+  body {
+    margin: 0 auto;
+    width: 800px;
+  }
+  pre {
+    background: #e3e3e3;
+    padding: 10px;
+  }
+  .main {
+    height: 245px;
+    width: 390px;
+    background-color: #DDDDDD;
+    overflow-y: scroll;
+  }
+  .display-div {
+    height: 999px;
+  }
+  .display-ib {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: none;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #C3C2C2;
+    border: none;
+    /*box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.4);*/
+    border-radius: 20px;
+  }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <th>RESULT</th>
+      <th>CODE</th>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="display-ib main">
+          <div class="display-div"></div>
+        </div>
+      </td>
+      <td>
+        <pre class="display-ib">
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C3C2C2;
+  border: none;
+  /*box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.4);*/
+  border-radius: 20px;
+}
+        </pre>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
