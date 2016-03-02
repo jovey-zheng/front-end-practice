@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FileIcon</title>
+  <style type="text/css">
+  body {
+    margin: 0 auto;
+    width: 800px;
+  }
+  pre {
+    background: #e3e3e3;
+    padding: 10px;
+  }
+  .display-ib {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .warpper {
+    padding: 20px;
+  }
+  .file-icon {
+    position: relative;
+    box-sizing: border-box;
+    width: 300px;
+    height: 400px;
+    border-style: solid;
+    border-color: #00f;
+    border-width: 0 0 300px 200px;
+    border-radius: 20px;
+  }
+  .file-icon:before,
+  .file-icon:after {
+    position: absolute;
+    content: '';
+  }
+  .file-icon:before {
+    z-index: 2;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border: 50px solid rgba(255,255,255,0.5);
+    border-right-color: transparent;
+    border-top-color: transparent;
+    border-bottom-left-radius: 20px;
+  }
+  .file-icon:after {
+    z-index: 1;
+    content: attr(data-type);
+    top: 0px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border: 50px solid #00f;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    box-shadow: -5px 5px 0 5px #00f;
+    color: #fff;
+    font-size: 80px;
+    text-indent: -200px;
+    line-height: 540px;
+  }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <th>RESULT</th>
+      <th>CODE</th>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="wrapper">
+          <div class="file-icon" data-type="css"></div>
+        </div>
+      </td>
+      <td>
+        <pre class="display-ib">
+.warpper {
+  background: silver;
+  padding: 20px;
+}
+.file-icon:before,
+.file-icon:after {
+  position: absolute;
+  content: '';
+}
+.file-icon {
+  position: relative;
+  box-sizing: border-box;
+  width: 300px;
+  height: 400px;
+  border-style: solid;
+  border-color: #00f;
+  border-width: 0 0 300px 200px;
+  border-radius: 20px;
+}
+.file-icon:before {
+  z-index: 2;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border: 50px solid rgba(255,255,255,0.5);
+  border-right-color: transparent;
+  border-top-color: transparent;
+  border-bottom-left-radius: 20px;
+}
+.file-icon:after {
+  z-index: 1;
+  content: attr(data-type);
+  top: 0px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border: 50px solid #00f;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  box-shadow: -5px 5px 0 5px #00f;
+  color: #fff;
+  font-size: 80px;
+  text-indent: -200px;
+  line-height: 540px;
+}
+        </pre>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

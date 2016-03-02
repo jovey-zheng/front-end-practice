@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Corner Folding</title>
+
+  <style>
+  body
+  {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  div,
+  span {
+    cursor: default;
+  }
+  .main {
+    font-family: cursive;
+
+    position: absolute;
+    z-index: 9;
+    top: 70px;
+    left: 138px;
+
+    width: 130px;
+    height: 200px;
+    padding: 5px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #fff;
+    background: #14a6fb;
+    border-radius: 3px 3px 0 0;
+  }
+  .main-list {
+    margin-top: 50px;
+  }
+  .main-list ul {
+    padding: 0;
+  }
+  .main-list ul > li {
+    margin-top: 2px;
+    padding: 5px;
+
+    list-style: none;
+
+    cursor: pointer;
+    transition: all .5s;
+
+    border: 2px solid #fff;
+  }
+  .main-list ul > li:hover {
+    color: #0ad9ef;
+    background: #fff;
+  }
+  .corner-folding {
+    font-family: cursive;
+    font-size: 16px;
+    font-weight: bolder;
+    line-height: 30px;
+
+    position: absolute;
+    z-index: 10;
+
+    width: 200px;
+    height: 30px;
+    margin: 100px;
+
+    text-align: center;
+
+    color: #fff;
+    background: #0ad9ef;
+  }
+  .corner-folding:before {
+    position: relative;
+    top: -36px;
+    left: -14px;
+
+    content: ' ';
+
+    border-bottom: 10px solid #11b2cc;
+    border-left: 30px solid transparent;
+  }
+  .corner-folding:after {
+    position: relative;
+    top: -36px;
+    right: -14px;
+
+    content: ' ';
+
+    border-right: 30px solid transparent;
+    border-bottom: 10px solid #11b2cc;
+  }
+  </style>
+
+</head>
+<body>
+  <div class="main">
+    <span class="main-header">use it</span>
+    <div class="main-list">
+      <ul>
+        <li>home</li>
+        <li>article</li>
+        <li>about</li>
+      </ul>
+    </div>
+  </div>
+  <div class="corner-folding">Corner Folding</div>
+</body>
+</html>
