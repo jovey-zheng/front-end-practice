@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <title>HOVER ANIMATION</title>
+  <style>
+    body {
+      font-family: fantasy;
+      font-size: 40px;
+
+      text-align: center;
+      text-transform: uppercase;
+
+      color: #6b6767;
+      background: #8cc0f5;
+    }
+    .description {
+      font-size: 18px;
+
+      margin-bottom: 3px;
+    }
+    .line {
+      line-height: 2.5em;
+
+      position: absolute;
+      top: 1.6em;
+      left: 50%;
+
+      width: 5em;
+      height: 2.5em;
+      margin-left: -2.5em;
+
+      cursor: pointer;
+    }
+    .line:after {
+      position: absolute;
+      right: 0;
+      bottom: -5px;
+
+      width: 5%;
+      height: 5px;
+
+      content: ' ';
+      transition: all .5s;
+
+      opacity: 0;
+      background: #4f91f3;
+    }
+    .line:before {
+      position: absolute;
+      top: -5px;
+      left: 0;
+
+      width: 5%;
+      height: 5px;
+
+      content: ' ';
+      transition: all .5s;
+
+      opacity: 0;
+      background: #4f91f3;
+    }
+    .line:hover::after,
+    .line:hover::before {
+      width: 100%;
+
+      opacity: 1;
+    }
+    .circle {
+      line-height: 15em;
+
+      width: 15em;
+      height: 15em;
+      margin: 3.5em auto;
+
+      cursor: pointer;
+      transform: translateZ(0);
+
+      border-radius: 100%;
+      background: #fff;
+    }
+    .circle > span {
+      transition: opacity .75s;
+
+      opacity: 0;
+    }
+    .circle:after {
+      transform: rotate(45deg);
+    }
+    .circle:before,
+    .circle:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: inherit;
+      height: inherit;
+
+      content: '';
+      -webkit-transition: box-shadow .75s;
+         -moz-transition: box-shadow .75s;
+          -ms-transition: box-shadow .75s;
+              transition: box-shadow .75s;
+
+      border-radius: 100%;
+      box-shadow: inset 10.6em 0 0 rgba(30, 140, 209, .2), inset 0 10.6em 0 rgba(30, 140, 209, .2), inset -10.6em 0 0 rgba(30, 140, 209, .2), inset 0 -10.6em 0 rgba(30, 140, 209, .2);
+    }
+    .circle:hover > span {
+      opacity: 1;
+    }
+    .circle:hover::before,
+    .circle:hover::after {
+      box-shadow: inset 1.1em 0 0 rgba(209, 30, 30, .2), inset 0 1.1em 0 rgba(209, 30, 195, .2), inset -1.1em 0 0 rgba(30, 140, 209, .2), inset 0 -1.1em 0 rgba(30, 209, 93, .2);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="description">可以将鼠标移至下面两个元素上观察效果：</div>
+  <div class="description">You can move the mouse to observe the effect of the following two elements:</div>
+  <div class="line">Line</div>
+  <div class="circle">
+    <span>Circle</span>
+  </div>
+</body>
+</html>
