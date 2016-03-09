@@ -1,6 +1,6 @@
 # Front End Sample
 This repositories record my ordinary ideas.  
-You can check it [here](http://jovey-zheng.github.io/font-end-sample).
+You can check it [here](http://jovey-zheng.github.io/front-end-sample).
 
 # Edit
 If you want to change something:
