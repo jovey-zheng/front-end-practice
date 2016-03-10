@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+  <style>
+    body {
+      background-color: rgba(206, 211, 215, .5);
+    }
+    .stack {
+      position: relative;
+
+      width: 200px;
+      height: 200px;
+      margin: 3em auto;
+
+      border: 6px solid #fff;
+      background-image: url('http://b.hiphotos.baidu.com/news/q%3D100/sign=4368cc41cf95d143dc76e02343f18296/1e30e924b899a9014dc77b741a950a7b0308f585.jpg');
+      background-repeat: no-repeat;
+      background-size: 200px 200px;
+      -webkit-box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+         -moz-box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+              box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+    }
+    .stack:before,
+    .stack:after {
+      position: absolute;
+
+      width: 200px;
+      height: 200px;
+
+      content: '';
+
+      border: 6px solid #fff;
+      -webkit-box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+         -moz-box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+              box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+    }
+    .stack:before {
+      z-index: -1;
+      top: 0;
+      left: -10px;
+
+      -webkit-transform: rotate(-10deg);
+         -moz-transform: rotate(-10deg);
+          -ms-transform: rotate(-10deg);
+           -o-transform: rotate(-10deg);
+              transform: rotate(-10deg);
+
+      background: #465f71;
+    }
+    .stack:after {
+      z-index: -1;
+      top: 5px;
+      left: 0;
+
+      -webkit-transform: rotate(10deg);
+         -moz-transform: rotate(10deg);
+          -ms-transform: rotate(10deg);
+           -o-transform: rotate(10deg);
+              transform: rotate(10deg);
+
+      background: #503400;
+    }
+    .angle-shadow {
+      font-family: cursive;
+      font-weight: bold;
+
+      position: relative;
+
+      width: 25em;
+      margin: 1em auto;
+      padding: 3em 0;
+
+      text-align: center;
+
+      background-color: #fff;
+    }
+    .angle-shadow .code {
+      font-weight: normal;
+
+      color: #3e3939;
+      background-color: #aaa;
+    }
+    .angle-shadow:before,
+    .angle-shadow:after {
+      position: absolute;
+      z-index: -1;
+      top: 80%;
+      bottom: 15px;
+      left: 10px;
+
+      width: 50%;
+
+      content: '';
+      transform: rotate(-3deg);
+
+      -webkit-box-shadow: 0 15px 10px #777;
+         -moz-box-shadow: 0 15px 10px #777;
+              box-shadow: 0 15px 10px #777;
+    }
+    .angle-shadow:after {
+      right: 10px;
+      left: auto;
+
+      transform: rotate(3deg);
+    }
+    .angle-shadow2 {
+      position: relative;
+
+      width: 25em;
+      margin: 2em auto;
+      padding: 3em 0;
+
+      background-color: #fff;
+      -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .3), 0 0 40px rgba(0, 0, 0, .1) inset;
+         -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, .3), 0 0 40px rgba(0, 0, 0, .1) inset;
+              box-shadow: 0 1px 4px rgba(0, 0, 0, .3), 0 0 40px rgba(0, 0, 0, .1) inset;
+    }
+    .angle-shadow2:before,
+    .angle-shadow2:after {
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      right: 2em;
+      bottom: 0;
+      left: 2em;
+
+      content: '';
+
+      border-radius: 100%;
+      -webkit-box-shadow: 0 0 20px rgba(0,0,0,.5);
+         -moz-box-shadow: 0 0 20px rgba(0,0,0,.5);
+              box-shadow: 0 0 20px rgba(0,0,0,.5);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="stack"></div>
+  <div class="angle-shadow">伪元素 <span class="code">:before</span> 与 <span class="code">:after</span> 效果</div>
+  <div class="angle-shadow2"></div>
+</body>
+</html>
