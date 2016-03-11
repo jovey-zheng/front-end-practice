@@ -134,12 +134,56 @@
          -moz-box-shadow: 0 0 20px rgba(0,0,0,.5);
               box-shadow: 0 0 20px rgba(0,0,0,.5);
     }
+    .animation-e {
+      width: 100px;
+      height: 100px;
+      margin: 70px auto;
 
+      animation: circle 3s infinite cubic-bezier(1, 1, 0, 0);
+
+      border: 1px solid #0567f9;
+      border-radius: 100%;
+    }
+    .animation-e:before {
+      position: absolute;
+
+      width: 15px;
+      height: 15px;
+      margin: 7px;
+
+      content: '';
+
+      border-radius: 100%;
+      background-color: #0567f9;
+    }
+    .animation-e:after {
+      position: absolute;
+
+      width: 50px;
+      height: 50px;
+      margin: 25px;
+
+      content: '';
+
+      border-radius: 100%;
+      background-color: #0567f9;
+    }
+    @keyframes circle {
+      from
+      {
+        transform: rotate(0) translateZ(0);
+      }
+      to
+      {
+        transform: rotate(360deg) translateZ(0);
+      }
+    }
   </style>
 </head>
 <body>
   <div class="stack"></div>
   <div class="angle-shadow">伪元素 <span class="code">:before</span> 与 <span class="code">:after</span> 效果</div>
   <div class="angle-shadow2"></div>
+  <div class="animation-e"></div>
 </body>
 </html>
