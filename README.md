@@ -5,9 +5,6 @@ You can check it [here](http://jovey-zheng.github.io/front-end-practice).
 # Edit
 If you want to change something:
 ```
-$ git clone git@github.com:jovey-zheng/font-end-sample.git
-$ cd font-end-sample/src
+$ git clone git@github.com:jovey-zheng/front-end-practice.git
+$ cd front-end-practice/src
 ```
-
-# Contribution
-If you have some amazing ideas, just push PR now!
