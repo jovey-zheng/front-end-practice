@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <title>Lamp</title>
+
+  <style>
+  body {
+    background-color: #000;
+  }
+  .lamp {
+    font-family: cursive;
+    position: relative;
+    z-index: 1;
+    width: 60px;
+    margin: 80px auto;
+    text-align: center;
+    color: #fff;
+    border-right: 30px solid transparent;
+    border-bottom: 40px solid rgba(255, 255, 255, .5);
+    border-left: 30px solid transparent;
+    perspective: 200px;
+  }
+  .lamp:after {
+    position: absolute;
+    z-index: -52;
+    bottom: -77px;
+    left: -2px;
+    width: 65px;
+    height: 30px;
+    content: '';
+    transform: rotateX(70deg);
+    border-bottom: 40px solid #fff;
+    border-radius: 100%;
+    box-shadow: 0 130px 90px #fff;
+  }
+  .lamp:hover:after {
+    border-bottom-color: rgb(212, 207, 207);
+    box-shadow: none;
+  }
+  </style>
+</head>
+<body>
+  <div class="lamp">HOVER ME</div>
+</body>
+</html>
