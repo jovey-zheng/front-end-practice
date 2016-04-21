@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <title>hover-bg</title>
+
+  <style>
+    body { background: #ddd; }
+    .hover-bg {
+      margin: 100px auto;
+      width: 100px;
+      height: 50px;
+      background: transparent;
+      border-radius: 5px;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      text-transform: uppercase;
+      line-height: 50px;
+      font-family: cursive;
+      transition: all .5s;
+    }
+    .hover-bg:before,
+    .hover-bg:after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background: #6dd;
+      transition: all .5s;
+      z-index: -1;
+    }
+    .hover-bg:before {
+      left: -49px;
+    }
+    .hover-bg:after {
+      right: -49px;
+    }
+    .hover-bg:hover {
+      color: #fff;
+    }
+    .hover-bg:hover:before {
+      left: 0;
+    }
+    .hover-bg:hover:after {
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="hover-bg">hover</div>
+</body>
+</html>
