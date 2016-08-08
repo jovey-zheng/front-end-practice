@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 File</title>
+  <script>
+    function change(e) {
+      var onFile = new FileReader();
+      var files = document.getElementById('upload').files[0];
+      var info = document.getElementById('filesList');
+
+      onFile.readAsDataURL(files)
+      onFile.onload = function(e) {
+        var newElement = document.createElement("li");
+        newElement.className = 'fileInfo';
+        newElement.innerHTML = files.name;
+        newElement.title = files.name;
+        info.appendChild(newElement);
+      }
+    }
+
+    window.onload = function(){
+      var wrapper = document.getElementById('wrapper');
+      wrapper.addEventListener('dragend', function(e) {
+        e.target.style.left = e.pageX + 'px';
+        e.target.style.top = e.pageY - e.target.clientHeight + 'px';
+      })
+    }
+  </script>
+  <style>
+    #wrapper {
+      display: block;
+      width: 250px;
+      height: 250px;
+      line-height: 250px;
+      border: 1px dashed #e33;
+      border-radius: 10px;
+      outline: none;
+      position: relative;
+      text-align: center;
+      color: #666;
+      transition: border-color .5s;
+    }
+    #wrapper:hover {
+      border-color: #3dd;
+    }
+    #upload {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: inherit;
+      height: inherit;
+      border-radius: inherit;
+      opacity: 0;
+    }
+    #filesList {
+      max-width: 250px;
+      max-height: 250px;
+      overflow-y: scroll;
+      list-style-type: decimal;
+    }
+    .fileInfo {
+      padding: 2px 0;
+      width: 150px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <a id="wrapper" draggable="true">
+    <input type="file" id="upload" onchange="change();" multiple="multiple" />
+    点击上传文件或拖拽到此处
+  </a>
+  <p>已上传文件列表：</p>
+  <ul id="filesList"></ul>
+</body>
+</html>

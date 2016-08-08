@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>RegionDot</title>
+	<style type="text/css">
+	.layer_container {
+		width: 200px;
+		margin: 100px auto;
+		height: 200px;
+		background-color: #999;
+		position: relative;
+	}
+
+	.dot {
+		position: absolute;
+		border-radius: 50%;
+		height: 6px;
+		width: 6px;
+		background-color: red;
+	}
+	</style>
+</head>
+<body>
+	<div class="layer_container" id="layer_container"></div>
+
+	<script type="text/javascript">
+	window.onload = function() {
+		var layer_container = document.getElementById('layer_container');
+
+		layer_container.addEventListener('click', function(e) {
+			var dot = document.createElement('span');
+			dot.className = 'dot';
+			dot.style.top = e.layerY - 3 + 'px';
+			dot.style.left = e.layerX - 3 + 'px';
+			layer_container.appendChild(dot);
+		});
+	}
+	</script>
+</body>
+</html>
