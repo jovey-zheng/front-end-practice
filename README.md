@@ -1,9 +1,11 @@
 # Front End Practice
-This repositories record my ordinary ideas.  
-You can check it [here](http://jovey-zheng.github.io/front-end-practice).
+
+This repositories record my ordinary ideas. [Live Demo](http://joveyzheng.com/front-end-practice).
 
 # Edit
-If you want to change something:
+
+If you want to change something or make PR:
+
 ```
 $ git clone git@github.com:jovey-zheng/front-end-practice.git
 $ cd front-end-practice/src
