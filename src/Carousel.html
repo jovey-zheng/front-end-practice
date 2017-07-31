@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Carousel</title>
+
+  <style>
+    body {
+      margin: 0;
+      text-align: center
+    }
+    .container {
+      margin: 0 auto;
+      width: 100px;
+      height: 50px;
+      position: relative;
+      overflow: hidden;
+    }
+    .item {
+      position: absolute;
+      width: 100%;
+      height: inherit;
+      transform: translateX(100%);
+      text-align: center;
+    }
+    .item.enter {
+      transform: translateX(0);
+      transition: transform 1s linear;
+    }
+    .item.leave {
+      transform: translateX(-100%);
+      transition: transform 1s linear;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div style="background: #666;" class="item enter">1</div>
+    <div style="background: #3da;" class="item">2</div>
+    <div style="background: #de1;" class="item">3</div>
+    <div style="background: #fa6;" class="item">4</div>
+  </div>
+
+  <button onclick="stop();">stop</button>
+
+  <script>
+  var items =document.querySelectorAll('.item');
+  var len = items.length;
+  var current = 0;
+
+  function next () {
+    for (i in items) {
+      if (items[i].classList[1] == 'enter') {
+        if (i == len - 1) {
+          current = 0;
+        } else {
+          current = Number(i) + 1;
+        }
+        items[i].classList.remove('enter')
+        items[i].classList.add('leave');
+
+        setTimeout(function() {
+          items[i].classList.remove('leave')
+        }, 1000);
+        break;
+      }
+    }
+
+    items[current].classList.add('enter');
+    items[current].classList.remove('leave');
+  }
+
+  var interval = setInterval(function () {
+    next();
+  }, 2000);
+
+  function stop () {
+    clearInterval(interval);
+  }
+  </script>
+</body>
+</html>
